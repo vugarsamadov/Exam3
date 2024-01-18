@@ -1,0 +1,20 @@
+﻿@model SocialMediaUpdateVM
+
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name">
+        <span style="color:red;" asp-validation-for="Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Icon"></label>
+        <input class="form-control" asp-for="Icon">
+        <span style="color:red;" asp-validation-for="Icon"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
